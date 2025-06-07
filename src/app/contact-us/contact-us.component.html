@@ -1,0 +1,50 @@
+<section class="contact-section py-5">
+  <div class="container" style="background-color:rgb(216, 216, 216);padding: 1em 0;">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6"> <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Say hello, let's talk</h2>
+        </div>
+
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-4"> <input
+              type="text"
+              class="form-control form-control-lg"
+              id="name"
+              placeholder="Enter your name"
+              required
+              [(ngModel)]="name"
+              name="name"
+            >
+          </div>
+
+          <div class="mb-4">
+            <input
+              type="email"
+              class="form-control form-control-lg"
+              id="email"
+              placeholder="Enter your email"
+              required
+              [(ngModel)]="email"
+              name="email"
+            >
+          </div>
+
+          <div class="mb-4">
+            <textarea
+              class="form-control form-control-lg"
+              id="message"
+              rows="6"
+              placeholder="Enter your message"
+              [(ngModel)]="message"
+              name="message"
+            ></textarea>
+          </div>
+
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-lg custom-send-btn" style="background-color: rgb(14, 45, 53);" (click)="envoyerEmailAvecSujetEtCorps()">SEND</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

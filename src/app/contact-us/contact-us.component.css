@@ -1,0 +1,73 @@
+.contact-section {
+  background-color: #f8f8f8; /* Light background as seen in the image */
+  position: relative;
+  /* Optional: Add background image or pattern if desired */
+  /* background-image: url('path/to/your/subtle-bg-image.png'); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-size: cover; */
+}
+
+.display-5 {
+    font-size: 2.5rem; /* Adjust font size if display-5 is too big/small */
+    font-weight: 700;
+    color: #333;
+}
+
+.form-control-lg {
+    padding: 0.75rem 1.25rem; /* Adjust padding for larger input fields */
+    font-size: 1.1rem;
+    border-radius: 0.375rem; /* Default Bootstrap rounded corners */
+    border: 1px solid #dee2e6; /* Light border color */
+    box-shadow: none; /* Remove default focus glow if desired, or customize */
+}
+
+/* Custom styling for the SEND button to match the image */
+.custom-send-btn {
+  background-color: #5cb85c; /* Green color from previous examples */
+  color: white;
+  padding: 12px 40px; /* Adjust padding to make it wider */
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-send-btn:hover {
+  background-color: #4CAF50; /* Darker green on hover */
+  color: white;
+}
+
+/* Adjustments for the asterisk next to the input fields.
+   Bootstrap doesn't add it automatically. You'd typically do this
+   with a ::after pseudo-element or by adding a span. */
+.mb-4 label::after {
+  content: " *";
+  color: red; /* Or any color you prefer for the asterisk */
+}
+
+/* To match the asterisk in the image which is inside the input,
+   you'd likely need to use a custom approach or just remove the asterisk from the image if it's decorative.
+   If it's truly inside, it might be a custom input design.
+   For simplicity, I've shown placeholder-based asterisks or a label-based one above.
+   The image shows the asterisk *inside* the input, which is unusual for a label.
+   If you strictly want it inside the placeholder, that's not standard for required fields.
+   A common way to indicate required fields is by using `required` attribute.
+*/
+.form-control[required]::placeholder::after { /* This pseudo-element approach is often not supported */
+    content: " *";
+    color: red;
+}
+
+/* More robust way for required fields if not using standard labels with asterisks */
+.mb-4 {
+    position: relative;
+}
+.mb-4 input:not([type="submit"])::placeholder,
+.mb-4 textarea::placeholder {
+    /* This does not directly add an asterisk to placeholder text as per standard CSS. */
+    /* If you truly need an asterisk *inside* the placeholder, you must manually type it:
+       placeholder="Enter your name *"
+    */
+}

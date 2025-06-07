@@ -1,0 +1,36 @@
+.portfolio-section {
+  background-color: #f8f9fa; /* bg-light de Bootstrap */
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.portfolio-section h2 {
+  color: #343a40; /* Couleur du texte principal */
+  font-family: 'Georgia', serif; /* Ou une police similaire si vous l'avez importée */
+}
+
+.portfolio-section p.lead {
+  color: #6c757d; /* Couleur du texte secondaire */
+}
+
+.portfolio-item {
+  /*Ajustements pour les cartes d'image si nécessaire*/
+  border-radius: 0.5rem; /*Coins légèrement arrondis*/
+  overflow: hidden; /*S'assure que les coins arrondis fonctionnent avec l'image
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;*/
+
+  img {
+    /*S'assure que toutes les images ont la même hauteur pour une grille uniforme*/
+    height: 350px; /*Ajustez cette hauteur selon vos préférences*/
+    object-fit: cover; /*Pour couvrir la zone sans déformer l'image*/
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-5px); /*Léger effet de soulèvement au survol*/
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2); /*Ombre plus prononcée*/
+    opacity: 50%;
+  }
+}
+

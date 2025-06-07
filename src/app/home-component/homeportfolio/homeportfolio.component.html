@@ -1,0 +1,25 @@
+<div class="portfolio-section bg-light py-5">
+  <div class="container text-center">
+    <h2 class="display-4 fw-bold mb-2">Portfolio</h2>
+    <p class="lead text-muted mb-5">L'amour de la création artistique</p>
+
+    <div class="row g-4"> <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of portfolioItems">
+        <div class="portfolio-item card shadow-sm border-0">
+          <img [src]="item.src" class="img-fluid card-img-top" [alt]="item.alt">
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="portfolio-section bg-light" style="margin-top: 2em; margin-bottom: -7em;">
+    <div class="container text-center">
+        <h2 class="display-4 fw-bold mb-2">Services</h2>
+        <p class="lead text-muted mb-5">Tous les services incluant un amour profond pour mon travail </p>
+    </div>
+</div>
+<div class="container" style="display: flex;">
+    <app-service [Service]="Services[0]"></app-service>
+    <app-service [Service]="Services[1]"></app-service>
+    <app-service [Service]="Services[2]"></app-service>
+</div>

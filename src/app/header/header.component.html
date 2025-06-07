@@ -1,0 +1,41 @@
+<nav class="navbar navbar-light bg-light p-3 border-bottom d-flex justify-content-between align-items-center">
+  <button class="btn btn-light d-flex align-items-center">
+    <i class="fas fa-chevron-left me-2"></i> Retour
+  </button>
+
+  <div class="btn-group" role="group" aria-label="Sélection de la vue">
+    <button type="button" class="btn btn-light">
+      <i class="fas fa-desktop"></i>
+    </button>
+    <button type="button" class="btn btn-light">
+      <i class="fas fa-tablet-alt"></i>
+    </button>
+    <button type="button" class="btn btn-light">
+      <i class="fas fa-mobile-alt"></i>
+    </button>
+  </div>
+
+  <div class="d-flex align-items-center">
+    <button class="btn btn-light me-2">
+      <i class="fas fa-external-link-alt"></i> </button>
+    <button class="btn btn-primary" style="padding: 1em 2.5em;" id="modifier">
+      MODIFIER
+    </button>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white p-3">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto"> 
+        <a class="nav-link active" aria-current="page" [routerLink]="['/home']" routerLinkActive="active">Home</a>
+        <a class="nav-link" [routerLink]="['/portfolio']" routerLinkActive="active">Portfolio</a>
+        <a class="nav-link" [routerLink]="['/contact-us']" routerLinkActive="active">Contact</a>
+        </div>
+    </div>
+  </div>
+</nav>

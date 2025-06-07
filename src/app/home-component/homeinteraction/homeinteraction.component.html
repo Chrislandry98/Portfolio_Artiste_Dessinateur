@@ -1,0 +1,27 @@
+<section class="stats-section py-5 text-center" style="background-color:#232324 ;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 mb-4" *ngFor="let stat of stats">
+        <div class="stat-item">
+          <i class="{{ stat.iconClass }} stat-icon"></i>
+          <h3 class="stat-number">{{ stat.number }}</h3>
+          <p class="stat-label">{{ stat.label }}</p>
+          <div class="underline"></div> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact-banner py-5" style="margin-top: 2em; background-color: rgb(245, 241, 235);">
+  <div class="container-fluid">
+    <div class="row d-flex align-items-center justify-content-between py-4">
+      <div class="col-12 col-md-8 text-center text-md-start mb-3 mb-md-0">
+        <h2 class="banner-heading">Vous me connaissez déja Laissez moi apprendre un peu de vous</h2>
+        <p class="banner-subtext">Contactez-moi et obtenez un service de qualité</p>
+      </div>
+      <div class="col-12 col-md-4 text-center text-md-end">
+        <button class="btn btn-contact" id="button">Contacter</button>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,76 @@
+.page-header {
+     /* Couleur de fond grise très claire similaire à l'image */
+  position: relative;
+  overflow: hidden; /* Pour que la décoration de feuille ne dépasse pas */
+  color: white;
+  font-family: 'Georgia', serif; /* Ou une police similaire si vous l'avez importée */
+  background-image: url('/ImagesHomeHeader/baniere5.jpeg');
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+.page-header p {
+  font-size: 1.25rem; 
+  color:black;
+}
+
+.header-leaf-decoration {
+  position: absolute;
+  top: -50px; 
+  left: -80px;
+  width: 200px; 
+  height: 200px;
+  background-image: url('/ImagesHomeHeader/baniere.jpg'); /* Assurez-vous d'avoir cette image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(30deg); /* Légère rotation si besoin */
+  opacity: 0.7; /* Opacité si la feuille est un peu estompée */
+}
+
+/* Styles pour la section de contenu "Hi, I am Julia Anderson" */
+.container {
+  /*Ajustez le padding si la section est plus ou moins grande*/
+}
+
+.display-5 {
+  font-size: 2.5rem; 
+  color: #343a40;
+}
+
+.lead.text-secondary {
+  font-size: 1.15rem;
+  line-height: 1.7; 
+  color: #6c757d;
+}
+
+.btn-success {
+  background-color: #5cb85c; 
+  border-color: #5cb85c;
+  &:hover {
+    background-color: #4cae4c; 
+    border-color: #4cae4c;
+  }
+}
+
+.btn-outline-secondary {
+  color: #6c757d; 
+  border-color: #6c757d; 
+  &:hover {
+    background-color: #6c757d;
+    color: white;
+  }
+}
+
+.img-fluid {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
+  width: 70%;
+}

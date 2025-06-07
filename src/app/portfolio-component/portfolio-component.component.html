@@ -1,0 +1,97 @@
+<div class="portfolio-section bg-light" style="background-image: url(/ImagesHomeHeader/baniere2.jpeg); background-size: cover;">
+  <div class="container text-center">
+    <h2 class="display-4 fw-bold mb-2" style="color: white;">Portfolio</h2>
+    <p class="lead mb-5" style="color: white;">A la découverte de mes créations</p>
+  </div>
+</div>
+
+
+
+<!-- Pour les portraits-->
+<div class="portfolio-section bg-light py-5"> <div class="container text-center">
+    <h2 class="display-4 fw-bold mb-2">Portraits dessins</h2>
+    <p class="lead text-muted mb-5">Des regards qui racontent. Ma collection de portraits au crayon</p>
+  </div>
+
+  <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" *ngFor="let item of portraitsItems; let i = index"
+                data-bs-target="#carouselExampleIndicators"
+                [attr.data-bs-slide-to]="i"
+                [class.active]="i === 0"
+                [attr.aria-current]="i === 0 ? 'true' : null"
+                [attr.aria-label]="'Slide ' + (i + 1)">
+        </button>
+      </div>
+
+      <div class="carousel-inner" style="width: 60%; display: flex; justify-self: center;">
+        <div class="carousel-item" [class.active]="i === 0" *ngFor="let item of portraitsItems; let i = index">
+          <img [src]="item.src" class="d-block w-100 carousel-image" [alt]="item.alt"
+               (click)="openImageModal(item)">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{ item.alt }}</h5>S
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Précédent</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Suivant</span>
+      </button>
+    </div>
+  </div>
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">{{ selectedImage?.alt }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeImageModal()"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img [src]="selectedImage?.src" class="img-fluid" [alt]="selectedImage?.alt" *ngIf="selectedImage">
+          <p *ngIf="!selectedImage">Chargement de l'image...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--Pour les tableaux-->
+<div class="portfolio-section bg-light" style="margin-top: 2em;">
+   <div class="container text-center">
+        <h2 class="display-4 fw-bold mb-2">Tableaux d'Art</h2>
+        <p class="lead text-muted mb-5">Un monde de couleurs et d'émotions. Découvrez mes tableaux d'art</p>
+    </div>
+    <div class="row g-4"> <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of tableauItems">
+        <div class="portfolio-item card shadow-sm border-0">
+            <a href="{{item.src}}" target="_blank">
+                <img [src]="item.src" class="img-fluid card-img-top" [alt]="item.alt">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--Pour le branding-->
+<div class="portfolio-section bg-light" style="margin-top: 2em;">
+   <div class="container text-center">
+        <h2 class="display-4 fw-bold mb-2">Branding</h2>
+        <p class="lead text-muted mb-5">Le branding : la fondation de votre succès. Développez une image qui vous ressemble</p>
+    </div>
+    <div class="row g-4"> <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of brandingItems">
+        <div class="portfolio-item card shadow-sm border-0">
+            <a href="{{item.src}}" target="_blank">
+                <img [src]="item.src" class="img-fluid card-img-top" [alt]="item.alt">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+ 

@@ -1,0 +1,129 @@
+/* stats-section.component.css (Conceptual) */
+
+.stats-section {
+  background-color: #f8f8f8; /* Light gray background to match the image */
+  position: relative; /* For the background shapes if you want to reproduce them */
+  overflow: hidden; /* To ensure shapes don't go out of bounds */
+}
+
+/* You might need to add styles for the geometric background shapes */
+/* These would typically be done with pseudo-elements or SVGs */
+/* For simplicity, I'm omitting the complex background shape CSS here. */
+
+
+.stat-item {
+  padding: 20px;
+}
+
+.stat-icon {
+  font-size: 2rem; /* Adjust icon size */
+  color: #045280; /* Green color for icons */
+  margin-bottom: 10px;
+}
+
+.stat-number {
+  font-size: 2rem; /* Adjust number size */
+  font-weight: bold;
+  color: #045280; /* Green color for numbers */
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.underline {
+  width: 50px; /* Width of the underline */
+  height: 2px;
+  background-color: #045280; /* Green color for underline */
+  margin: 0 auto; /* Center the underline */
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 767.98px) {
+  .stat-icon {
+    font-size: 2.5rem;
+  }
+  .stat-number {
+    font-size: 3rem;
+  }
+}
+
+
+
+.contact-banner {
+  background-color: #f8f8f8; /* Light gray background */
+  padding: 80px 0; /* Adjust padding top/bottom as needed for height */
+  position: relative; /* For the background image */
+  overflow: hidden; /* To ensure background image doesn't overflow */
+}
+
+/* Background Image Overlay (adjust path and opacity) */
+.contact-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/ImagesHomeHeader/baniere8.jpg'); /* Replace with your background image path */
+  background-size: cover; /* or 'contain' or '100% 100%' depending on image */
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1; /* Adjust opacity to make it subtle */
+  z-index: 0; /* Keep it behind the content */
+}
+
+.contact-banner .container-fluid {
+  position: relative; /* Bring content above the pseudo-element background */
+  z-index: 1;
+}
+
+.banner-heading {
+  font-size: 1.8rem; /* Adjust font size */
+  font-weight: bold;
+  color: #333; /* Dark gray for the text */
+  margin-bottom: 5px;
+}
+
+.banner-subtext {
+  font-size: 1.3rem; /* Adjust font size */
+  color: #333; /* Dark gray for the text */
+  margin-bottom: 0;
+}
+
+.btn-contact {
+  background-color: #232324; /* Green button color */
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px; /* Slightly rounded corners */
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: white; /* Darker green on hover */
+  color:#232324; /* Ensure text remains white on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .contact-banner .row {
+    padding: 0 50px; /* Add horizontal padding for larger screens if needed */
+  }
+}
+
+@media (max-width: 767.98px) {
+  .banner-heading,
+  .banner-subtext {
+    font-size: 1.5rem; /* Smaller font on small screens */
+  }
+  .btn-contact {
+    width: 100%; /* Full width button on small screens */
+  }
+}
+

@@ -1,0 +1,135 @@
+#footer_links i{
+    padding: 1em 0.5em;
+    font-size: 0.8em;
+}
+
+#footer_links a{
+    background-color: black;
+    
+}
+
+li a{
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin-left: 2em;
+}
+
+
+
+/***************** style des links button *****************************/
+.linkButton{
+  position: relative;
+  right: 0;
+  bottom: 320px;
+  position: fixed;
+}
+
+/***********style du whatsapp button lors du survol*****************************/
+.whatsapp-button{
+  display: none;
+}
+
+#whatsappButton.survole  .whatsapp-button {
+  position: relative; /* Pour positionner l'élément pseudo-élément */
+  display: inline-flex; /* Pour aligner l'icône et le texte côte à côte */
+  align-items: center; /* Pour centrer verticalement l'icône et le texte */
+  background-color: #25d366; /* Couleur de fond verte de WhatsApp */
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 9em;
+  transition: transform 0.8s ease; /* Animation de la transformation */
+  display: flex;
+  
+}
+
+#whatsappButton.survole .whatsapp-button {
+  transform: translateX(-5px); /* Déplacement vers le haut au survol */
+  animation: apparition 500ms ease-out forwards;
+}
+@keyframes apparition {
+  to {
+    opacity: 1; /* Visible après l'animation */
+    transform: translateX(0); /* Position finale */
+  }
+}
+.whatsapp-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.whatsapp-button span {
+  font-weight: bold;
+}
+
+/*****************Style du telegram button lors du survole**************************/
+.telegram-button{
+  display: none;
+}
+
+#telegramButton.survoleTel  .telegram-button {
+  position: relative; /* Pour positionner l'élément pseudo-élément */
+  display: inline-flex; /* Pour aligner l'icône et le texte côte à côte */
+  align-items: center; /* Pour centrer verticalement l'icône et le texte */
+  background-color: #007bff; /* Couleur de fond verte de WhatsApp */
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 8em;
+  transition: transform 0.8s ease; /* Animation de la transformation */
+  display: flex;
+  
+}
+
+#telegramButton.survoleTel .telegram-button {
+  transform: translateX(-5px); /* Déplacement vers le haut au survol */
+  animation: apparition 500ms ease-out forwards;
+}
+@keyframes apparition {
+  to {
+    opacity: 1; /* Visible après l'animation */
+    transform: translateX(0); /* Position finale */
+  }
+}
+.telegram-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.telegram-button span {
+  font-weight: bold;
+}
+
+/************ style du hidden button ************************/
+
+#networkButton{
+  display: flex;
+  flex-direction: column;
+}
+#arrowContainer.hidden #networkButton{
+  display: none;
+}
+
+#flecheDroite {
+  transform: rotate(0deg); /* Pivote de 180 degrés (100% vers la gauche) */
+  transition: transform 0.3s ease; /* Ajoute une transition pour une animation fluide */
+}
+
+#arrowContainer.hidden #flecheDroite{
+  transform: rotate(180deg); /* Déplacement vers le haut au survol */
+  animation: apparition 500ms ease-out forwards;
+}
+
+@keyframes apparition {
+  to {
+    opacity: 1; /* Visible après l'animation */
+    transform: rotate(100%); /* Position finale */
+  }
+}

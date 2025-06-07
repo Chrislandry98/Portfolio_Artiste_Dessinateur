@@ -1,0 +1,14 @@
+#modifier{
+    background-color:#212529;
+}
+
+#modifier:hover{
+    background-color: white;
+    color: #212529;
+}
+
+i{
+    font-size: 2em;
+}
+
+
