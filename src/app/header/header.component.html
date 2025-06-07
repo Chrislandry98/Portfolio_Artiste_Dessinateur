@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-light p-3 border-bottom d-flex justify-content-between align-items-center">
   <button class="btn btn-light d-flex align-items-center">
-    <i class="fas fa-chevron-left me-2"></i> Retour
+    <a class="nav-link active" aria-current="page" [routerLink]="['/home']"><i class="fas fa-chevron-left me-2"></i> Retour</a>
   </button>
 
   <div class="btn-group" role="group" aria-label="Sélection de la vue">
@@ -19,7 +19,7 @@
     <button class="btn btn-light me-2">
       <i class="fas fa-external-link-alt"></i> </button>
     <button class="btn btn-primary" style="padding: 1em 2.5em;" id="modifier">
-      MODIFIER
+       <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Acceuil</a>
     </button>
   </div>
 </nav>
