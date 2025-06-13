@@ -34,7 +34,7 @@ export class ContactUsComponent {
     envoyerEmailAvecSujetEtCorps() {
     const sujet = encodeURIComponent('Informations sur nos services');
     const corps = encodeURIComponent('J\'aimerai avoir plus d\'infos sur vos services');
-    window.location.href = "mailto:takamlandry1998@gmail.com?subject=" + encodeURIComponent(sujet) + "&body=" + encodeURIComponent(corps);
+    window.location.href = "mailto:epandef@gmail.com?subject=" + encodeURIComponent(sujet) + "&body=" + encodeURIComponent(corps);
   }
 
 }

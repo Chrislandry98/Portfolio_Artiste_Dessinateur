@@ -1,7 +1,7 @@
 import { Service } from "./service";
 
 export const ServiceTable : Service[] = [
-    {id:1, image:"/ImagesServices/imageGraphicDesign.jpg", titre:'Graphic Design', description:"La réalité numérique mondiale m'a inévitablement poussé à m'intégrer à ce domaine créatif. Le mélange de photographie et d'art graphique est le meilleur moyen d'exprimer mes idées les plus fantaisistes. J'ai encore plein d'idées uniques en tête, qui demandent à être concrétisées."},
-    {id:2, image:"/ImagesServices/ImagePortrait.jpg", titre:'Portrait dessin', description:"Je crée des portraits dessinés uniques, capturant l'âme et l'émotion de chaque personne. Que ce soit pour un cadeau mémorable ou pour immortaliser un être cher, je mets mon talent au service de vos plus belles histoires"},
-    {id:3, image:"/ImagesServices/ImageTableau.jpg", titre:'Tableau artistique', description:"En tant qu'artiste passionné(e) par le dessin, je vous propose des œuvres d'art sur mesure qui révèlent la beauté et l'essence de votre sujet. Chaque trait est appliqué avec soin et dévotion pour créer une pièce d'art authentique et significative."},
+    {id:1, image:"/ImagesServices/imageGraphicDesign.jpg", titre:'Graphic Design', description:"The global digital reality inevitably led me to become involved in this creative field. The combination of photography and graphic art is the best way to express my most imaginative ideas. I still have lots of unique ideas in my head that are waiting to be realized."},
+    {id:2, image:"/ImagesServices/ImagePortrait.jpg", titre:'Portrait drawing', description:"I create unique drawn portraits that capture the soul and emotion of each person. Whether it's for a memorable gift or to immortalize a loved one, I put my talent at the service of your most beautiful stories."},
+    {id:3, image:"/ImagesServices/ImageTableau.jpg", titre:'Artistic painting', description:"As an artist passionate about drawing, I offer custom artwork that reveals the beauty and essence of your subject. Each stroke is applied with care and devotion to create an authentic and meaningful piece of art."},
 ]

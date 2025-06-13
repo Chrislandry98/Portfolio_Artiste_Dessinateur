@@ -1,5 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 interface StatItem {
   iconClass: string; // Class for the icon (e.g., 'bi bi-person', 'fa fa-user')
@@ -10,7 +11,7 @@ interface StatItem {
 @Component({
   selector: 'app-homeinteraction',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, RouterLink],
   templateUrl: './homeinteraction.component.html',
   styleUrl: './homeinteraction.component.css'
 })

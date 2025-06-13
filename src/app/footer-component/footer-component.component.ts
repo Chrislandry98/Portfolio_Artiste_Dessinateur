@@ -39,4 +39,11 @@ export class FooterComponentComponent {
     console.log(this.estCache);
   }
 
+  envoyerEmailAvecSujetEtCorps() {
+    const sujet = encodeURIComponent('Informations sur nos services');
+    const corps = encodeURIComponent('J\'aimerai avoir plus d\'infos sur vos services');
+    /*window.location.href = mailto:djamencherif98@gmail.com?subject=${sujet}&body=${corps};*/
+  }
+
+
 }
